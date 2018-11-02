@@ -23,7 +23,8 @@ namespace VerstaTest
         }
 
         public void AddOrder(Order order)
-        { 
+        {
+            order.Date = DateTime.Now.Date;
                 context.Add(order);
                 context.SaveChanges();
         }
