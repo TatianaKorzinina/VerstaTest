@@ -8,15 +8,16 @@ class Order extends React.Component {
     }
 
     render() {
-        return <div>
-            <tr><td>{this.state.data.senderCity}</td>
+        return <tr>
+                <td>{this.state.data.orderId}</td> 
+                <td>{this.state.data.senderCity}</td>
                 <td>{this.state.data.senderAddress}</td>
                 <td>{this.state.data.recipientCity}</td>
                 <td>{this.state.data.recipientAddress}</td>
                 <td>{this.state.data.goodsWeight}</td>
                 <td>{this.state.data.date}</td>
-            </tr>
-              </div>
+            
+              </tr>
 
         
                    
@@ -58,6 +59,7 @@ class OrderList extends React.Component {
                
                 <table >
                     <thead><tr>
+                        <th>номер заказа</th>
                         <th>город отправителя</th>
                         <th>адрес отправителя</th>
                         <th>город доставки</th>
