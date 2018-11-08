@@ -29,7 +29,8 @@ namespace VerstaTest.Controllers
         [HttpPost]
         public void Post([FromBody]Order order)
         {
-            repository.AddOrder(order);
+            if (ModelState.IsValid)
+                repository.AddOrder(order);
         }
 
         // PUT api/values/5

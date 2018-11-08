@@ -15,13 +15,8 @@ class Order extends React.Component {
                 <td>{this.state.data.recipientCity}</td>
                 <td>{this.state.data.recipientAddress}</td>
                 <td>{this.state.data.goodsWeight}</td>
-                <td>{this.state.data.date}</td>
-            
-              </tr>
-
-        
-                   
-                   
+                <td>{this.state.data.date}</td>      
+              </tr>                  
                ;
     }
 }
@@ -79,6 +74,7 @@ class OrderList extends React.Component {
                 </table>
                 
             </div>
+            <a href="/">создать новый заказ</a>
         </div>;
     }
 }

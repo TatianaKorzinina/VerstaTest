@@ -1,25 +1,11 @@
-﻿//class Hello extends React.Component {
-//    render() {
-//        return <h1>Привет, React.JS</h1>;
-//    }
-//}
-//ReactDOM.render(
-//    <Hello />,
-//    document.getElementById("content")
-//);
-
-
+﻿
 class Order extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = { data: props.order };
-        //this.onClick = this.onClick.bind(this);
     }
 
-    //onClick(e) {
-    //    this.props.onRemove(this.state.data);
-    //}
     render() {
         return <tbody>
             <tr><td>{this.state.data.senderCity}</td>
@@ -37,8 +23,6 @@ class Order extends React.Component {
                ;
     }
 }
-
-
 
 class OrderForm extends React.Component{
  
@@ -92,6 +76,7 @@ class OrderForm extends React.Component{
             <div>
                 
             <form onSubmit={this.onSubmit}>
+               
                 <p>
                     <input type="text"
                            placeholder="город отправителя"
@@ -136,9 +121,7 @@ class OrderList extends React.Component {
     constructor(props) {
         super(props);
         this.state = { orders: [] };
-
         this.onAddOrder = this.onAddOrder.bind(this);
-        //this.onRemovePhone = this.onRemovePhone.bind(this);
     }
     // загрузка данных
     loadData() {
@@ -178,9 +161,9 @@ class OrderList extends React.Component {
     render() {
 
        
-        return <div>
-                   <OrderForm onOrderSubmit={this.onAddOrder} />
-                   <a href="List.html">посмотреть список заказов</a>
+  return <div>
+               <OrderForm onOrderSubmit={this.onAddOrder} />
+               <a href="List.html">посмотреть список заказов</a>
             
         </div>;
     }
